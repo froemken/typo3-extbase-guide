@@ -1,0 +1,9 @@
+# Settings.yml
+
+---
+conf.py:
+  copyright: 2000-2013
+  project: Official Template
+  version: 2.0.0
+  release: 2.0.0
+...

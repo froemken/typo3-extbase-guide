@@ -16,10 +16,10 @@ Official Template
       official_template
 
 :Version:
-      2.0.0
+      1.0.0
 
 :Language:
-      en
+      de
 
 :Description:
       Template for all the official manuals
@@ -28,7 +28,7 @@ Official Template
       2000-2013
 
 :Author:
-      Documentation Team
+      Stefan Frömken
 
 :Email:
       documentation@typo3.org
@@ -46,62 +46,42 @@ a GNU/GPL CMS/Framework available from `www.typo3.org
 <http://www.typo3.org/>`_
 
 
-**Official documentation**
+Extbase
+=======
 
-This document is included as part of the official TYPO3 documentation.
-It has been approved by the TYPO3 Documentation Team following a peer-
-review process. The reader should expect the information in this
-document to be accurate - please report discrepancies to the
-Documentation Team (documentation@typo3.org). Official documents are
-kept up-to-date to the best of the Documentation Team's abilities.
+What is Extbase?
+----------------
 
-*(Note: The above box must be present in every official manual. For
-translations use the box below)*
+Extbase is a framework for TYPO3 extension development. It was introduced with
+TYPO 4.3 in 2009 and is bound to entirely replace the classic way of writing
+TYPO3 extension (pibase). Most important it is a gateway for TYPO3 4.x/6.x to
+version Phoenix as it is a backport of FLOW3 technology.
 
-**Official documentation translation**
+Should I use Extbase?
+---------------------
 
-This document is a translation of a TYPO3 official manual. It may not
-be as up to date as the original. In case of doubt please refer to the
-English version.
+If you develop an extension for TYPO3 you should most definitely use Extbase.
+The days of piBased extensions are numbered. Extbase gives you the benefit of a
+modern, clear and highly structured way of PHP development with a hidden bonus:
+If you know Extbase, getting into FLOW3 will be much, much easier for you. Another
+bonus: Porting Extbase extensions to Phoenix will be a walk in the park, whereas
+porting a piBased extension to Phoenix will be incredibly laborious if possible at
+all, and pobably a very bad experience for everyone involved.
 
-*(Note: This appears for translations instead of the text above)*
+How do I get started with Extbase?
+----------------------------------
 
-*(Note: From the boxes below, only the one that corresponds to the
-type of manual must be present)*
+* You should definitively check out the Extbase documentation section.
+* The TYPO3 extension repository (TER) already holds lots of extensions based on
+  Extbase, inspect the code.
+* Also check out how to get Extbase support.
 
-**Core Manual**
+Want to contribute?
+-------------------
 
-This document is a Core Manual. Core Manuals address the built in
-functionality of TYPO3 and are designed to provide the reader with in-
-depth information. Each Core Manual addresses a particular process or
-function and how it is implemented within the TYPO3 source code. These
-may include information on available APIs, specific configuration
-options, etc.
-
-Core Manuals are written as reference manuals. The reader should rely
-on the Table of Contents to identify what particular section will best
-address the task at hand.
-
-**Guide**
-
-This document is a Guide. Guides are designed to familiarize a reader
-with a specific topic in order to provide a working knowledge of that
-particular process. Readers should peruse the guide from cover to
-cover in order to gain a practical overview of the process. Once
-completed, the Guide becomes a practical reference tool that a reader
-will refer to as needed. Guides offer advice on how best to achieve a
-given task.
-
-**Tutorial**
-
-This document is a Tutorial. Tutorials are designed to be step-by-step
-instructions specifically created to walk a beginner through a
-particular task from beginning to end. To facilitate effective
-learning, Tutorials provide examples to illustrate the subjects they
-cover. In addition, Tutorials provide guidance on how to avoid common
-pitfalls and highlight key concepts that should be remembered for
-future reference.
-
+Do you want to take part in making Extbase, TYPO3, and the world an even better
+place/project? We would love to welcome you to the team if you want to contribute
+in a substantial way. Click here for more info.
 
 **Table of Contents**
 
@@ -110,8 +90,4 @@ future reference.
    :titlesonly:
    :glob:
 
-   Introduction/Index
-   Chapter1/Index
-   NextSteps/Index
-   Targets
-
+   Extbase/*

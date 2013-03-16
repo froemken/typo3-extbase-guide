@@ -1,3 +1,10 @@
+.. ==================================================
+.. FOR YOUR INFORMATION
+.. --------------------------------------------------
+.. -*- coding: utf-8 -*- with BOM.
+
+.. include:: Includes.txt
+
 Unsere erste Extbase Extension
 ==============================
 
@@ -160,11 +167,11 @@ da wir eine Detailansicht der jeweiligen Produkte planen.
 Fügt dem Domainmodel folgende Properties hinzu:
 
 =============  =============  ===========  ===========  ================
-Property name	 Property type  Description	 Is required  Is exclude field
+Property name  Property type  Description  Is required  Is exclude field
 =============  =============  ===========  ===========  ================
-name	         String         Name         Yes          No
+name           String         Name         Yes          No
 image          Image          Image        No           No
-description	   Text           Description  No           No
+description    Text           Description  No           No
 =============  =============  ===========  ===========  ================
 
 **Table of Contents**
@@ -172,9 +179,8 @@ description	   Text           Description  No           No
 .. toctree::
    :maxdepth: 5
    :titlesonly:
-	 :glob:
+   :glob:
 
-	 Introduction/Index
-	 Chapter1/Index
-	 NextSteps/Index
-	 Targets
+   Introduction/Index
+   Chapter1/IndexNextSteps/Index
+   Targets

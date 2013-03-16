@@ -86,8 +86,10 @@ in a substantial way. Click here for more info.
 **Table of Contents**
 
 .. toctree::
-   :maxdepth: 5
+   :maxdepth: 1
    :titlesonly:
    :glob:
 
-   Extbase/*
+   FirstExtbaseExtension
+   Step1Introduction/Index
+   Step2SystemCheck/Index

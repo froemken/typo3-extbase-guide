@@ -54,6 +54,5 @@ Template-Engine namens *Fluid* entwickelt, die flexibel und erweiterbar, aber do
    :titlesonly:
    :glob:
 
-   ViewHelper/Alias
-   ViewHelper/Index
+   ViewHelper/*
    Targets

@@ -24,29 +24,6 @@ Das ist sinnvoll, wenn Ihr einen bestimmten Wert (Texte, Zahlen oder Werte aus O
    :Description: Der Key gibt den Namen der neuen Variable wieder, während der Value den Inhalt wieder spiegelt.
    :Mandatory    X
 
-   
-.. t3-field-list-table::
- :header-rows: 1
-
- - :Property,20:    Property
-   :Data type,20:   Data type
-	   :Description,50: Description
-	   :Default,10:     Default
-
-	 - :Property:    allWrap
-	   :Data type:   wrap / stdWrap
-	   :Description: Wraps the whole item
-
-	 - :Property:    wrapItemAndSub
-
-	   :Data type:   wrap / stdWrap
-
-	   :Description:
-	         Wraps the whole item and
-	         any submenu concatenated to it.
-
-
-
 
 Beispiel für einfache Texte
 ---------------------------

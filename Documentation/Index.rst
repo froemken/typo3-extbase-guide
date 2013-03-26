@@ -8,27 +8,24 @@
 
 .. _start:
 
-=================
-Official Template
-=================
+=============================
+Offizieller TYPO3 Fluid Guide
+=============================
 
 :Previous Key:
-      official_template
+      typo3_fluid_guide
 
 :Version:
-      2.0.0
+      1.0.0
 
 :Language:
-      en
-
-:Description:
-      Template for all the official manuals
+      de
 
 :Copyright:
       2000-2013
 
 :Author:
-      Documentation Team
+      Stefan Frömken
 
 :Email:
       documentation@typo3.org

@@ -8,21 +8,18 @@
 
 .. _start:
 
-=================
-Official Template
-=================
+===============================
+Offizieller TYPO3 Extbase Guide
+===============================
 
 :Previous Key:
-      official_template
+      typo3_extbase_guide
 
 :Version:
       1.0.0
 
 :Language:
       de
-
-:Description:
-      Template for all the official manuals
 
 :Copyright:
       2000-2013

@@ -1,13 +1,18 @@
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
+<<<<<<< HEAD
 .. -*- coding: utf-8 -*- with BOM. ÄÖÜäöüß
+=======
+.. -*- coding: utf-8 -*- with BOM.
+>>>>>>> FETCH_HEAD
 
 .. include:: Includes.txt
 
 
 .. _start:
 
+<<<<<<< HEAD
 ======================================================
 Offizieller TYPO3 Extbase Guide (Entwurf)
 ======================================================
@@ -42,12 +47,40 @@ Sources
 The sources of this draft are located at
 `Github <https://github.com/marble/typo3-incoming-notes>`_.
 
+=======
+===============================================
+Offizieller TYPO3 Fluid Guide (Entwurf)
+===============================================
+
+:Version:
+      1.0.0
+
+:Language:
+      de
+
+:Copyright:
+      2000-2013
+
+:Author:
+      Stefan Frömken
+
+:Email:
+      documentation@typo3.org
+
+:License:
+      Open Content License available from `www.opencontent.org/opl.shtml
+      <http://www.opencontent.org/opl.shtml>`_
+
+:Rendered:
+      |today|
+>>>>>>> FETCH_HEAD
 
 The content of this document is related to TYPO3,
 
 a GNU/GPL CMS/Framework available from `www.typo3.org
 <http://www.typo3.org/>`_
 
+<<<<<<< HEAD
 
 Extbase
 =======
@@ -85,10 +118,25 @@ Want to contribute?
 Do you want to take part in making Extbase, TYPO3, and the world an even better
 place/project? We would love to welcome you to the team if you want to contribute
 in a substantial way. Click here for more info.
+=======
+Sitemap
+=======
+
+:ref:`Sitemap <sitemap>`
+
+TYPO3 Fluid
+===========
+
+In diesem Guide zeigen wir Ihnen wie Sie Ausgaben für den Nutzer einfach und schnell erzeugen können.
+Um diese Arbeit möglichst effizient zu gestalten, wurde speziell für TYPO3 CMS und TYPO3 Flow eine neue
+Template-Engine namens *Fluid* entwickelt, die flexibel und erweiterbar, aber doch einfach zu erlernen ist.
+
+>>>>>>> FETCH_HEAD
 
 **Table of Contents**
 
 .. toctree::
+<<<<<<< HEAD
    :maxdepth: 1
    :titlesonly:
    :glob:
@@ -99,3 +147,11 @@ in a substantial way. Click here for more info.
    Step2SystemCheck/Index
    FinalPages/*
    
+=======
+   :maxdepth: 5
+   :titlesonly:
+   :glob:
+
+   ViewHelper/*
+   Targets
+>>>>>>> FETCH_HEAD

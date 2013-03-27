@@ -1,41 +1,47 @@
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
+.. -*- coding: utf-8 -*- with BOM. ÄÖÜäöüß
 
 .. include:: Includes.txt
 
 
 .. _start:
 
-===============================
-Offizieller TYPO3 Extbase Guide
-===============================
+======================================================
+Offizieller TYPO3 Extbase Guide (Entwurf)
+======================================================
 
-:Previous Key:
-      typo3_extbase_guide
+:Author:          Stefan Frömken <froemken@gmail.com>
+:Buildinfo:       `Make folder <_make>`_
+:Copyright:       2013 up to now
+:Description:     ...
+:Language:        de
+:License:         `CC BY-SA 3.0 <http://creativecommons.org/licenses/by-sa/3.0/>`_
+:Rendered:        |today|
 
-:Version:
-      1.0.0
 
-:Language:
-      de
+Sitemap
+=======
 
-:Copyright:
-      2000-2013
+:ref:`Sitemap <sitemap>`
 
-:Author:
-      Stefan Frömken
+License
+=======
 
-:Email:
-      documentation@typo3.org
+`CC BY-SA 3.0 <http://creativecommons.org/licenses/by-sa/3.0/>`_ 
+Creative Commons Attribution-ShareAlike 3.0 Unported.
+You are free
+- to share: to copy, distribute and transmit the work
+- to remix: to adapt the work
+- to make commercial use of the work
 
-:License:
-      Open Content License available from `www.opencontent.org/opl.shtml
-      <http://www.opencontent.org/opl.shtml>`_
 
-:Rendered:
-      |today|
+Sources
+=======
+The sources of this draft are located at
+`Github <https://github.com/marble/typo3-incoming-notes>`_.
+
 
 The content of this document is related to TYPO3,
 
@@ -87,6 +93,9 @@ in a substantial way. Click here for more info.
    :titlesonly:
    :glob:
 
+   Extbase/Index
    FirstExtbaseExtension
    Step1Introduction/Index
    Step2SystemCheck/Index
+   FinalPages/*
+   

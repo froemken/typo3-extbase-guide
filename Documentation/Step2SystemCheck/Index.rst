@@ -1,12 +1,12 @@
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
+.. -*- coding: utf-8 -*- with BOM. ÄÖÜäöüß
 
 .. include:: ../Includes.txt
 
 Step 2 - System Check
-===================
+=====================
 
 **Table of Contents**
 

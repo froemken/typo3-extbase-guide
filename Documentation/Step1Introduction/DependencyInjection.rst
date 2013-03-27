@@ -1,9 +1,9 @@
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
+.. -*- coding: utf-8 -*- with BOM. ÄÖÜäöüß
 
-.. include:: Includes.txt
+.. include:: ../Includes.txt
 
 Dependency Injection
 ====================

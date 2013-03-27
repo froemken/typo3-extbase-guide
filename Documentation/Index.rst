@@ -1,14 +1,9 @@
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
-<<<<<<< HEAD
 .. -*- coding: utf-8 -*- with BOM. ÄÖÜäöüß
-=======
-.. -*- coding: utf-8 -*- with BOM.
->>>>>>> FETCH_HEAD
 
 .. include:: Includes.txt
-
 
 .. _start:
 
@@ -73,14 +68,6 @@ Offizieller TYPO3 Fluid Guide (Entwurf)
 
 :Rendered:
       |today|
->>>>>>> FETCH_HEAD
-
-The content of this document is related to TYPO3,
-
-a GNU/GPL CMS/Framework available from `www.typo3.org
-<http://www.typo3.org/>`_
-
-<<<<<<< HEAD
 
 Extbase
 =======
@@ -136,7 +123,6 @@ Template-Engine namens *Fluid* entwickelt, die flexibel und erweiterbar, aber do
 **Table of Contents**
 
 .. toctree::
-<<<<<<< HEAD
    :maxdepth: 1
    :titlesonly:
    :glob:
@@ -146,12 +132,4 @@ Template-Engine namens *Fluid* entwickelt, die flexibel und erweiterbar, aber do
    Step1Introduction/Index
    Step2SystemCheck/Index
    FinalPages/*
-   
-=======
-   :maxdepth: 5
-   :titlesonly:
-   :glob:
 
-   ViewHelper/*
-   Targets
->>>>>>> FETCH_HEAD

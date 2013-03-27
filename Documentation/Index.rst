@@ -7,7 +7,6 @@
 
 .. _start:
 
-<<<<<<< HEAD
 ======================================================
 Offizieller TYPO3 Extbase Guide (Entwurf)
 ======================================================
@@ -35,39 +34,6 @@ You are free
 - to share: to copy, distribute and transmit the work
 - to remix: to adapt the work
 - to make commercial use of the work
-
-
-Sources
-=======
-The sources of this draft are located at
-`Github <https://github.com/marble/typo3-incoming-notes>`_.
-
-=======
-===============================================
-Offizieller TYPO3 Fluid Guide (Entwurf)
-===============================================
-
-:Version:
-      1.0.0
-
-:Language:
-      de
-
-:Copyright:
-      2000-2013
-
-:Author:
-      Stefan Frömken
-
-:Email:
-      documentation@typo3.org
-
-:License:
-      Open Content License available from `www.opencontent.org/opl.shtml
-      <http://www.opencontent.org/opl.shtml>`_
-
-:Rendered:
-      |today|
 
 Extbase
 =======
@@ -105,6 +71,7 @@ Want to contribute?
 Do you want to take part in making Extbase, TYPO3, and the world an even better
 place/project? We would love to welcome you to the team if you want to contribute
 in a substantial way. Click here for more info.
+
 =======
 Sitemap
 =======
@@ -117,8 +84,6 @@ TYPO3 Fluid
 In diesem Guide zeigen wir Ihnen wie Sie Ausgaben für den Nutzer einfach und schnell erzeugen können.
 Um diese Arbeit möglichst effizient zu gestalten, wurde speziell für TYPO3 CMS und TYPO3 Flow eine neue
 Template-Engine namens *Fluid* entwickelt, die flexibel und erweiterbar, aber doch einfach zu erlernen ist.
-
->>>>>>> FETCH_HEAD
 
 **Table of Contents**
 

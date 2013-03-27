@@ -8,9 +8,9 @@
 
 .. _start:
 
-=============================
-Offizieller TYPO3 Fluid Guide
-=============================
+===============================================
+Offizieller TYPO3 Fluid Guide (Entwurf)
+===============================================
 
 :Version:
       1.0.0
@@ -38,6 +38,11 @@ The content of this document is related to TYPO3,
 
 a GNU/GPL CMS/Framework available from `www.typo3.org
 <http://www.typo3.org/>`_
+
+Sitemap
+=======
+
+:ref:`Sitemap <sitemap>`
 
 TYPO3 Fluid
 ===========

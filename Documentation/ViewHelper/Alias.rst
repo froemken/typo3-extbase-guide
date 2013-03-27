@@ -22,7 +22,7 @@ Das ist sinnvoll, wenn Ihr einen bestimmten Wert (Texte, Zahlen oder Werte aus O
  - :Property:    map
    :Data type:   Array
    :Description: Der Key gibt den Namen der neuen Variable wieder, während der Value den Inhalt wieder spiegelt.
-   :Mandatory    X
+   :Mandatory:   X
 
 
 Beispiel für einfache Texte

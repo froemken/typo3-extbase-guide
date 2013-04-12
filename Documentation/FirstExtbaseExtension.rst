@@ -117,12 +117,3 @@ Tabellenspalten extremst eng beieinander. Erstellt nun ein +extTemplate für Eur
 Template von Eurer Extension ein. Danach erscheint Eure Tabelle ein wenig aufgeräumter.
 
 Viel Spaß mit Eurer ersten Extbase Extension
-
-**Table of Contents**
-
-.. toctree::
-   :maxdepth: 5
-   :titlesonly:
-   :glob:
-
-   Introduction/Index

@@ -94,6 +94,7 @@ Template-Engine namens *Fluid* entwickelt, die flexibel und erweiterbar, aber do
 
    Extbase/Index
    FirstExtbaseExtension
+   ExtendExtbaseExtension
    Step1Introduction/Index
    Step2SystemCheck/Index
    FinalPages/*

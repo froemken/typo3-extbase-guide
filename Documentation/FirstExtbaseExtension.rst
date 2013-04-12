@@ -89,6 +89,35 @@ Im Domainmodel *Product* könnt Ihr nun von der Relation *category* eine Linie z
    :alt: Domainmodelling
    :width: 700
 
+Extension aktivieren
+--------------------
+
+Geht nun in den Extension Manager und aktiviert die Extension *productoverview*. Bei diesem Vorgang werden auch die
+fehlenden Datenbanktabellen erstellt.
+
+Plugin einbinden
+----------------
+
+Legt eine neue Seite an und bindet das neu erstellte Plugin mit dem Namen "Product" auf Eurer Seite ein. Wenn alles
+geklappt hat, dann erscheint im Frontend eine leere Tabelle mit den beiden Tabellen-Überschriften *title* und *price*.
+
+Datensätze anlegen
+------------------
+
+Legt im TYPO3-Seitenbaum eine neue Seite vom Typ *Ordner* an. Auf dieser Seite könnt Ihr nun neue Datensätze vom Typ
+*Product* erstellen. Damit diese Daten in Eurem Plugin angezeigt werden, müsst Ihr diesem mitteilen,
+wo sich die Daten befinden. Geht dazu in Euer Plugin auf den Tab *Verhalten*. Tragt im Bereich *Datensatzsammlung"
+die uid der Seite mit den Product-Datensätze ein. Nun erscheinen die Datensätze auch im Frontend
+
+Designanpassungen
+-----------------
+
+Jede Extension, die über den Extension Builder erstellt wurde bringt ein kleines CSS mit. Derzeit sind die
+Tabellenspalten extremst eng beieinander. Erstellt nun ein +extTemplate für Eure Seite und bindet das Extension
+Template von Eurer Extension ein. Danach erscheint Eure Tabelle ein wenig aufgeräumter.
+
+Viel Spaß mit Eurer ersten Extbase Extension
+
 **Table of Contents**
 
 .. toctree::

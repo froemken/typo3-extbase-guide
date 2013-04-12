@@ -106,7 +106,7 @@ Datensätze anlegen
 
 Legt im TYPO3-Seitenbaum eine neue Seite vom Typ *Ordner* an. Auf dieser Seite könnt Ihr nun neue Datensätze vom Typ
 *Product* erstellen. Damit diese Daten in Eurem Plugin angezeigt werden, müsst Ihr diesem mitteilen,
-wo sich die Daten befinden. Geht dazu in Euer Plugin auf den Tab *Verhalten*. Tragt im Bereich *Datensatzsammlung"
+wo sich die Daten befinden. Geht dazu in Euer Plugin auf den Tab *Verhalten*. Tragt im Bereich *Datensatzsammlung*
 die uid der Seite mit den Product-Datensätze ein. Nun erscheinen die Datensätze auch im Frontend
 
 Designanpassungen

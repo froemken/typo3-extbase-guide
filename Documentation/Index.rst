@@ -19,12 +19,6 @@ Offizieller TYPO3 Extbase Guide (Entwurf)
 :License:         `CC BY-SA 3.0 <http://creativecommons.org/licenses/by-sa/3.0/>`_
 :Rendered:        |today|
 
-
-Sitemap
-=======
-
-:ref:`Sitemap <sitemap>`
-
 License
 =======
 
@@ -72,30 +66,22 @@ Do you want to take part in making Extbase, TYPO3, and the world an even better
 place/project? We would love to welcome you to the team if you want to contribute
 in a substantial way. Click here for more info.
 
-=======
-Sitemap
-=======
+TYPO3 Extbase
+=============
 
-:ref:`Sitemap <sitemap>`
+In diesem Guide zeigen wir Euch, wie Ihr eine einfach Extbase Extension erstellen könnt und erklären Euch die
+wichtigsten Objekte Schritt für Schritt.
 
-TYPO3 Fluid
-===========
-
-In diesem Guide zeigen wir Ihnen wie Sie Ausgaben für den Nutzer einfach und schnell erzeugen können.
-Um diese Arbeit möglichst effizient zu gestalten, wurde speziell für TYPO3 CMS und TYPO3 Flow eine neue
-Template-Engine namens *Fluid* entwickelt, die flexibel und erweiterbar, aber doch einfach zu erlernen ist.
-
-**Table of Contents**
+**Inhaltsverzeichnis**
 
 .. toctree::
    :maxdepth: 1
    :titlesonly:
    :glob:
 
-   Extbase/Index
    FirstExtbaseExtension
    ExtendExtbaseExtension
    Step1Introduction/Index
    Step2SystemCheck/Index
-   FinalPages/*
-
+   Step3Documentation/Index
+   Targets

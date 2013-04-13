@@ -5,8 +5,8 @@
 
 .. include:: ../Includes.txt
 
-Schritt 2 - Systemcheck
-=======================
+Schritt 3 - Dokumentation
+=========================
 
 **Inhaltsverzeichnis**
 
@@ -15,5 +15,7 @@ Schritt 2 - Systemcheck
    :titlesonly:
    :glob:
 
-   Typo3
-   Php
+   Architecture
+   Arguments
+   Bootstrap
+   Dispatcher

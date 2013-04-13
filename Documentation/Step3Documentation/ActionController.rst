@@ -53,7 +53,7 @@ Wert erreicht, wird die weitere Ausführung des Scriptes verhindert und eine Feh
  }
 
 UriBuilder
-----------
+::::::::::
 
 Der *UriBuilder* bietet Euch die Möglichkeit an Links zu erzeugen. Sämtliche Einstellungen,
 die Ihr in TypoScript hinterlegt habt, werden beim Erstellen von Links berücksichtig. So auch die Konfiguration der
@@ -63,7 +63,7 @@ Der *ActionController* benötigt den *UriBuilder* zum Verlinken auf eine andere 
 die über eine veränderte Uri geladen werden soll: $this->redirect();
 
 Die Action
-----------
+::::::::::
 
 In der ext_localconf.php werden alle erlaubten *Actions* registriert und nur mit ihrem Namen angesprochen. Zum
 Beispiel: list, detail, update, edit, delete. Auch in der Uri werden die *Actions* mit diesem Namen versehen.

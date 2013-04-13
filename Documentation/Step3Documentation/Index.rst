@@ -21,3 +21,4 @@ Schritt 3 - Dokumentation
    Dispatcher
    ActionController
    Repository
+   Query

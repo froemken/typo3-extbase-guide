@@ -22,3 +22,4 @@ Schritt 3 - Dokumentation
    ActionController
    Repository
    Query
+   ObjectManager

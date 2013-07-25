@@ -2,13 +2,8 @@
 
 ---
 conf.py:
-<<<<<<< HEAD
-  copyright: 2013 - 
-  project: Offizieller Extbase Guide (Entwurf)
-=======
-  copyright: 2013-
-  project: Offizieller TYPO3 Fluid Guide (Entwurf)
->>>>>>> FETCH_HEAD
-  version: 0.0.0
-  release: 0.0.0
+  copyright: 2000-2013
+  project: Official Template
+  version: 2.0.0
+  release: 2.0.0
 ...

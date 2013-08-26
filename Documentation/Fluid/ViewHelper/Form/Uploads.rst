@@ -13,7 +13,9 @@ Mit diesem ViewHelper erstellst Du ein Uploadfeld, um Dateien an den Server zu s
 Eigenschaften
 -------------
 
-Dieser ViewHelper besitzt keine Eigenschaften
+.. include:: ../../UniversalTagAttributes.txt
+
+.. include:: ../../UniversalFormFieldAttributes.txt
 
 Beispiel
 --------

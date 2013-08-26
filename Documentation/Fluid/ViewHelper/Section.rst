@@ -14,6 +14,9 @@ innerhalb des Templates definiert werden müssen.
 Eigenschaften
 -------------
 
+Eigenschaften speziell für diesen ViewHelper
+############################################
+
 .. t3-field-list-table::
  :header-rows: 1
 
@@ -26,7 +29,7 @@ Eigenschaften
  - :Property:    name
    :Datatype:    String
    :Description: Ein Name unter dem man den Inhalt zwischen den Tags wieder auffinden kann
-   :Standard:    NULL
+   :Standard:
    :Mandatory:   Ja
 
 Beispiel

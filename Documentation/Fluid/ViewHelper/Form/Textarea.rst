@@ -14,7 +14,9 @@ Gut geeignet z.B. für das Nachrichtenfeld im Kontaktformular.
 Eigenschaften
 -------------
 
-Dieser ViewHelper besitzt keine Eigenschaften
+.. include:: ../../UniversalTagAttributes.txt
+
+.. include:: ../../UniversalFormFieldAttributes.txt
 
 Beispiele:
 ----------

@@ -18,6 +18,11 @@ platziert habt.
 Eigenschaften
 -------------
 
+.. include:: ../UniversalTagAttributes.txt
+
+Eigenschaften speziell für diesen ViewHelper
+############################################
+
 .. t3-field-list-table::
  :header-rows: 1
 

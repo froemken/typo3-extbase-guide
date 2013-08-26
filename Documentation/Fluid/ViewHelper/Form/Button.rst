@@ -16,6 +16,8 @@ Eigenschaften
 
 .. include:: ../../UniversalTagAttributes.txt
 
+.. include:: ../../UniversalFormFieldAttributes.txt
+
 Eigenschaften speziell für das HTML-Element
 ###########################################
 
@@ -31,26 +33,26 @@ Eigenschaften speziell für das HTML-Element
  - :Property:    autofocus
    :Datatype:    String
    :Description: Der Button erhält automatisch den Focus wenn die Webseite geladen wird.
-   :Standard:    NULL
+   :Standard:
    :Mandatory:   Nein
 
  - :Property:    disabled
    :Datatype:    String
    :Description: Der Button wird beim Webseitenaufruf deaktiviert dargestellt.
-   :Standard:    NULL
+   :Standard:
    :Mandatory:   Nein
 
  - :Property:    form
    :Datatype:    String
    :Description: Zu welchem Formular oder Formularen gehört dieser Button
-   :Standard:    NULL
+   :Standard:
    :Mandatory:   Nein
 
  - :Property:    formaction
    :Datatype:    String
    :Description: Nur wenn der Typ auf "submit" gesetzt wurde, kann hiermit angegeben werden wohin die Formulatdaten
                  gesendet werden sollen.
-   :Standard:    NULL
+   :Standard:
    :Mandatory:   Nein
 
  - :Property:    formenctype
@@ -58,47 +60,47 @@ Eigenschaften speziell für das HTML-Element
    :Description: Wie sollen die Daten codiert werden bevor das Formular abgesendet wird. Funktioniert nur mit dem
                  Typen "submit". Mögliche Werte wären z.B. "application/x-www-form-urlencoded", "multipart/form-data"
                  oder "text/plain"
-   :Standard:    NULL
+   :Standard:
    :Mandatory:   Nein
 
  - :Property:    formmethod
    :Datatype:    String
    :Description: Wenn der Typ "submit" gewählt wurde, kann hier angegeben werden wie die Formulardaten gesendet
                  werden sollen. Mögliche Werte "get" oder "post"
-   :Standard:    NULL
+   :Standard:
    :Mandatory:   Nein
 
  - :Property:    formnovalidate
    :Datatype:    String
    :Description: Wenn der Typ "submit" gewählt wurde, kann hier angegeben werden, ob die Formulardaten beim Absenden
                  überprüft werden sollen.
-   :Standard:    NULL
+   :Standard:
    :Mandatory:   Nein
 
  - :Property:    formtarget
    :Datatype:    String
    :Description: Wenn der Typ "submit" gewählt wurde, kann hier angegeben werden wo das Formularergebnis angezeigt
                  werden soll. Mögliche Werte sind: "_blank", "_self", "_parent", "_top" oder "framename"
-   :Standard:    NULL
+   :Standard:
    :Mandatory:   Nein
 
  - :Property:    name
    :Datatype:    String
    :Description: Der Name des HTML-Elementes
-   :Standard:    NULL
+   :Standard:
    :Mandatory:   Nein
 
  - :Property:    property
    :Datatype:    String
    :Description: Diese Eigenschaft klappt nur unter Verwendung von <f:form object="...">. "name" und "value"
                  Eigenschaften werden ignoriert
-   :Standard:    NULL
+   :Standard:
    :Mandatory:   Nein
 
  - :Property:    value
    :Datatype:    Mixed
    :Description: Der Wert, der beim Absenden übermittelt werden soll.
-   :Standard:    NULL
+   :Standard:
    :Mandatory:   Nein
 
 Eigenschaften speziell für diesen ViewHelper

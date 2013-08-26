@@ -13,6 +13,13 @@ Mit diesem ViewHelper erstellt Ihr eine Selectbox.
 Eigenschaften
 -------------
 
+.. include:: ../../UniversalTagAttributes.txt
+
+.. include:: ../../UniversalFormFieldAttributes.txt
+
+Eigenschaften speziell für diesen ViewHelper
+############################################
+
 .. t3-field-list-table::
  :header-rows: 1
 

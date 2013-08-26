@@ -14,7 +14,9 @@ Sternchen umgewandelt.
 Eigenschaften
 -------------
 
-Dieser ViewHelper besitzt keine Eigenschaften
+.. include:: ../../UniversalTagAttributes.txt
+
+.. include:: ../../UniversalFormFieldAttributes.txt
 
 Beispiel
 --------

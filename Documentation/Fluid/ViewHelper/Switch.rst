@@ -26,9 +26,10 @@ Eigenschaften speziell für diesen ViewHelper
    :Standard,10:    Standard
    :Mandatory,10:   Mandatory
 
- - :Property:    name
-   :Datatype:    String
-   :Description: Ein Name unter dem man den Inhalt zwischen den Tags wieder auffinden kann
+ - :Property:    expression
+   :Datatype:    Mixed
+   :Description: Gebt hier einen Wert oder eine Variable an an Hand der entschieden werden soll,
+                 welcher case geladen werden soll.
    :Standard:
    :Mandatory:   Ja
 

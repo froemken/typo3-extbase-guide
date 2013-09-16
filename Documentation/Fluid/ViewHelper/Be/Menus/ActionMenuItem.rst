@@ -26,26 +26,26 @@ Eigenschaften
  - :Property:    label
    :Datatype:    String
    :Description: Der anzuzeigende Name des Menüeintrages
-   :Standard:    NULL
+   :Standard:
    :Mandatory:   Ja
 
  - :Property:    controller
    :Datatype:    String
    :Description: In welchem Controller liegt die aufzurufende Action
-   :Standard:    NULL
+   :Standard:
    :Mandatory:   Ja
 
  - :Property:    action
    :Datatype:    String
    :Description: Welche Action soll nach Auswahl aufgerufen werden
-   :Standard:    NULL
+   :Standard:
    :Mandatory:   Ja
 
  - :Property:    arguments
    :Datatype:    Array
    :Description: Welche Parameter sollen an die aufzurufende Action übergeben werden
    :Standard:    Leeres Array
-   :Mandatory:   Ja
+   :Mandatory:   Nein
 
 Beispiel
 --------

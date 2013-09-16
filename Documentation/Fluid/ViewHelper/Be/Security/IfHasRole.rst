@@ -28,7 +28,7 @@ Eigenschaften
  - :Property:    role
    :Datatype:    String
    :Description: Entweder der Gruppenname (Groß- und Kleinschreibung beachten) oder die Gruppen-UID
-   :Standard:    NULL
+   :Standard:
    :Mandatory:   Ja
 
 Beispiel WENN->DANN->SONST

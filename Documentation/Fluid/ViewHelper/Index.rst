@@ -28,6 +28,7 @@ Template-Engine namens *Fluid* entwickelt, die flexibel und erweiterbar, aber do
    Widget/Index
    Alias
    Base
+   Case
    CObject
    Comment
    Count

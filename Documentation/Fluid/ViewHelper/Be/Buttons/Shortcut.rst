@@ -26,13 +26,13 @@ Eigenschaften
    :Datatype:    Array
    :Description: Wenn nichts angegeben wird, dann werden Seiten-UID, Modul und Modulargumente mit dem Favoriten zusammen abgespeichert.
    :Standard:    Leeres Array
-   :Mandatory:   Ja
+   :Mandatory:   Nein
 
  - :Property:    setVars
    :Datatype:    Array
    :Description: Hier wird auf template::makeShortcutIcon() verwiesen. Wird aber für Extbase-Module normalerweise nicht benötigt.
    :Standard:    Leeres Array
-   :Mandatory:   Ja
+   :Mandatory:   Nein
 
 Beispiel
 --------

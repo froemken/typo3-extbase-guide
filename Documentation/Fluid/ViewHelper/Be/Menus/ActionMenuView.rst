@@ -27,6 +27,6 @@ Eigenschaften
    :Datatype:    String
    :Description: Gebt hier den Controllernamen ein auf den zurückgegriffen werden soll, falls im ActionMenuItem-ViewHelper kein Controller angegeben worden ist. Wenn ich mir den ViewHelper im Quellcode anschaue, würde ich diesen Parameter besser nicht verwenden. Erstens: Weil er im Quelltext überhaupt nicht weiter verwendet wird und Zweitens: Weil der Controller in den ActionMenuItems eh eine Pflichtangabe ist.
    :Standard:    NULL
-   :Mandatory:   Ja
+   :Mandatory:   Nein
 
 Beispiele findet Ihr bei den ActionMenuItem-ViewHelpern

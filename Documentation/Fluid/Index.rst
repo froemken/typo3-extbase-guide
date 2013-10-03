@@ -21,5 +21,5 @@ Template-Engine namens *Fluid* entwickelt, die flexibel und erweiterbar, aber do
    :glob:
 
    ViewHelper/Index
-   Wissenswertes/Index
+   ThingsToKnow/Index
    BestPractice/Index

@@ -9,10 +9,17 @@ Formulare
 =========
 
 In diesem Tutorial zeigen wir Euch, wie Ihr mit Extbase und Fluid Formulare erstellen könnt. Wir fangen hier mit
-old-school Formularen an, die keine bzw. sehr wenige ViewHelper beinhalten. Dabei zeigen wir Euch,
-an was Ihr alles denken müsst, damit auch Extbase versteht, was Ihr vorhabt. Fangen wir damit an,
-dass wir einen Hoteldatensatz anlegen wollen. Die wichtigsten Eigenschaften wie Titel,
-Beschreibung und Anzahl der Räume sind als Domainmodel angelegt, wobei der Titel als Pflichtfeld deklariert wurde.
+old-school Formularen an, wie viele sie evtl. von früheren Zeiten her kennen. Wir zeigen Euch hier Formulare,
+die völlig Fluid fremd sind und wie Ihr Extbase trotzdem dazu bewegen könnt auf diese unkonventionellen Daten
+entsprechend zu reagieren. Dabei kommen die wahnwitzigsten Konstrukte zu stande, wie wir sie am Liebsten nie sehen
+wollen und doch ist es für so Manchen einmal mehr wichtig zu wissen, was und vor allem wie etwas
+innerhalb von Extbase funktioniert.
+
+In den folgenden Beispielen haben wir immer das gleiche Formular mit Feldern, die in das Domainmodel Hotel portiert
+werden müssen: Titel, Beschreibung und Räume. Die Abfrage bzgl. dem Pflichtfeld für Titel findet im Controller statt.
+Extbaseprofis wissen, dass dies an andere Stelle gehört, aber dazu später mehr.
+
+Fangen wir mit einem echt old-school-Formular an.
 
 Wie man es nicht machen sollte!!!
 ---------------------------------
@@ -42,7 +49,9 @@ Hier das HTML-Gerüst für das Formular::
    </dl>
  </form>
 
-Dieses Formular ist auf Anhieb nicht ungewöhnlich, aber schauen wir uns mal den PHP-Quellcode der createAction an::
+Dieses Formular ist auf Anhieb nicht ungewöhnlich. OK, die UID der Zielseite ist nicht dynamisch und die URI
+erscheint etwas arg lang, aber es handelt sich immer noch um ein voll funktionstüchtiges Formular. Schauen wir uns
+nun den PHP-Quelltext der createAction im Hotelcontroller an::
 
  /**
   * action create
@@ -80,8 +89,8 @@ Durcheinander zwischen den jeweiligen Extensions und Plugins gibt, haben die TYP
 früh für Namespaces in den URI-Parametern entschieden. Diese Namespaces bestehen aus
 tx\_[Extensionname]_[Pluginname]. In unseren Beispielen heißt die Extension "sfextbase" und das Plugin "extbase".
 Somit lautet der Namespace in unseren Beispielen: "tx_sfextbase_extbase". Extbase kann von Haus aus diesen Namespace
-selbständig generieren und auf die Variablen in diesem Namespace zugreifen. All dies geschieht hier im RequestBuilder
-(extbase/Classes/Mvc/Web/RequestBuilder.php)::
+selbständig generieren und somit auf die Variablen in diesem Namespace zugreifen. All dies geschieht hier im
+RequestBuilder (extbase/Classes/Mvc/Web/RequestBuilder.php)::
 
  $pluginNamespace = $this->extensionService->getPluginNamespace($this->extensionName, $this->pluginName);
  $parameters = \TYPO3\CMS\Core\Utility\GeneralUtility::_GPmerged($pluginNamespace);
@@ -91,10 +100,10 @@ selbständig generieren und auf die Variablen in diesem Namespace zugreifen. All
    $files[$pluginNamespace]);
  }
 
-Wie Ihr seht greift Extbase auch auf die globale Variable $_FILES zu und stellt Euch die Informationen über hoch
-geladene Dateien direkt in dem Pluginnamespace zur Verfügung.
+Wie Ihr seht greift Extbase auch auf die globale Variable $_FILES zu und stellt Euch die Informationen über
+hochgeladene Dateien direkt in dem Pluginnamespace zur Verfügung.
 
-Schauen wir uns nun das neue Formular an::
+Schauen wir uns nun das Formular in etwas überarbeiteter Fassung an::
 
  <form action="{f:uri.action(controller: 'Hotel', action: 'create')}" method="post">
    <dl>
@@ -115,10 +124,10 @@ Schauen wir uns nun das neue Formular an::
    </dl>
  </form>
 
-Durch die Verwendung des f:uri-ViewHelpers im action-Attribut des Formulars kann Extbase die Seiten-UID nun selbst
-heraus finden. Die Angaben für Controller und Action werden automatisch in den Pluginnamespace eingetragen und Ihr
-müsst weniger schreiben. Den name-Attribute ist nun der Pluginnamespace vorangestellt und die dazugehörige Action
-könnte so aussehen::
+Durch die Verwendung des f:uri-ViewHelpers im action-Attribut des Formulars kann Extbase die Seiten-UID der
+aktuellen Seite selbst heraus finden. Die Angaben für Controller und Action werden automatisch in den
+Pluginnamespace eingetragen und Ihr müsst weniger schreiben. Den name-Attributen ist nun der Pluginnamespace
+vorangestellt und die dazugehörige Action "könnte" so aussehen::
 
  /**
   * action create
@@ -150,7 +159,7 @@ könnte so aussehen::
 
 ALLE Werte von Formularen sind entweder Strings ODER Arrays. Formulare kennen kein Float,
 Boolean oder Integer. Damit Extbase weiß, in welches Format ein solcher String konvertiert werden soll, muss diese
-Information Extbase mitgeteilt werden. Dies könnt Ihr in der PHPDoc nachholen::
+Information Extbase mitgeteilt werden. Dies erledigt Ihr innerhalb der PHPDoc einer jeden Actionmethode::
 
  /**
   * action create
@@ -183,8 +192,8 @@ Die Array-Version
 
 Was macht Ihr, wenn der Hotel-Datensatz wächst und Ihr 25 oder sogar 40 Eigenschaften für das Hotel habt? Nach den
 Beispielen von oben müsstet Ihr nun die createAction mit 40 Parametern aufrufen. Das wird eine lange Zeile...eine
-sehr lange Zeile. Wie ich bereits oben geschildert habe, können Formulare Daten als String und auch als Array
-übergeben. Letzteres schaut im HTML-Quellcode so aus::
+sehr lange Zeile. Wie bereits oben geschildert, können Formulare Daten als String und auch als Array
+übergeben. Letzteres schaut im HTML-Quelltext so aus::
 
  <form action="{f:uri.action(controller: 'Hotel', action: 'create')}" method="post">
    <dl>
@@ -246,8 +255,8 @@ Die wohl langweiligste Version::
 Array in Objekt konvertieren
 ############################
 
-In der API von Extbase befindet sich eine Klasse mit dem Namen DataMapper. Darin enthalten eine Methode,
-die auf den Namen "map" hört. Hier könnt Ihr die Zielklasse angeben und die Daten-Arrays,
+In der API von Extbase befindet sich eine Klasse mit dem Namen "DataMapper". Darin ist eine Methode enthalten,
+die auf den Namen "map" hört. Hier könnt Ihr die Zielklasse angeben und die Daten als Array,
 die in diesen angegebenen Typen konvertiert werden sollen. Die createAction schaut nun so aus::
 
  /**
@@ -276,9 +285,9 @@ die in diesen angegebenen Typen konvertiert werden sollen. Die createAction scha
 Extbase die Konvertierung überlassen
 ------------------------------------
 
-Wir haben gelernt, dass Extbase die Werte vom Formular anhand der Angaben im PHPDoc selbst konvertieren kann. Bisher
+Wir haben gelernt, dass Extbase die Werte von Formularen anhand der Angaben im PHPDoc selbst konvertieren kann. Bisher
 haben wir dies nur für Strings und Integer ausprobiert, aber auch die komplette Konvertierung eines Arrays zu einem
-Objekt kann Extbase uns abnehmen. Schauen wir uns dazu erstmal wieder das HTML an::
+Objekt kann Extbase für uns abnehmen. Schauen wir uns dazu erstmal wieder das HTML an::
 
  <form action="{f:uri.action(controller: 'Hotel', action: 'create')}" method="post">
    <dl>
@@ -322,7 +331,7 @@ createAction dazu::
 
 Extbase erkennt völlig automatisch, dass es sich bei dem Wert vom Formular um ein Array handelt und sucht sich
 einen passenden Converter, der für die Konvertierung von Array zu Objekt zuständig ist raus. Der DataMapper aus dem
-oberen Beispiel wird also gar nicht mehr gebraucht. Und wieder ist unser Quellcode etws kleiner geworden.
+oberen Beispiel wird also gar nicht mehr gebraucht. Und wieder ist unser Quelltext etws kleiner geworden.
 
 Aber Halt! Extbase wirft eine Fehlermeldung::
 
@@ -332,7 +341,7 @@ Aber Halt! Extbase wirft eine Fehlermeldung::
 Das hier ist ein Seegen und ein Fluch gleichzeitig. Sobald wir uns im Bereich von Objekten befinden, schaltet Extbase
 ein zusätzliches Sicherheitssystem ein. Dieses System muss mit dem neuen Property Mapper konfiguriert werden. Wir
 erstellen nun eine Methode, die noch VOR dem eigentlichen Aufruf der createAction ausgeführt wird und teilen dem
-neuen Property Mapper mit, dass es erlaubt werden soll die Eigenschaften title, description und rooms von dem Array
+neuen Property Mapper mit, dass es erlaubt ist die Eigenschaften title, description und rooms von dem Array
 aus dem Formular in unser Objekt zu portieren::
 
  /**
@@ -355,13 +364,14 @@ Falls es zu viele Eigenschaften sein sollten, könnt Ihr auch einfach alle Eigen
    $this->arguments->getArgument('newHotel')->getPropertyMappingConfiguration()->allowAllProperties();
  }
 
-Bei den Argumenten handelt es sich nicht um die Werte, die vom Formular kommen. Extbase ließt mit Hilfe von
-Reflection-Klassen Euren Controller und kann heraus finden, was für Parameter Ihr in Eure Methoden angegeben habt. In
-unserer createAction zum Beispiel befindet sich der Parameter $newHotel mit dem Datentyp:
+Bei den Argumenten ($this->arguments) handelt es sich nicht um die Werte, die vom Formular kommen. Extbase ließt mit
+Hilfe von Reflection-Klassen Euren Controller und kann heraus finden, was für Parameter Ihr in Eure Methoden
+angegeben habt. In unserer createAction zum Beispiel befindet sich der Parameter $newHotel mit dem Datentyp:
 \SF\Sfextbase\Domain\Model\Hotel
-In diesen Argumenten stehen später aus so Informationen drin wie Standardwert, Datentyp, Name,
-Überprüfungsroutinen (Validatoren) und natürlich auch der Wert, der NACH einer entsprechenden Konvertierung vom
-Formular übergeben worden ist.
+
+In diesen Argumenten stehen später auch so Informationen drin wie Standardwert,
+Datentyp, Name, Überprüfungsroutinen (Validatoren) und natürlich auch der Wert,
+der NACH einer entsprechenden Konvertierung vom Formular übergeben worden ist.
 
 Aber selbst mit diesen Angaben meckert Extbase noch immer::
 
@@ -392,7 +402,7 @@ Ab jetzt klappt auch wieder unser Formular
 Der f:form-ViewHelper
 ---------------------
 
-Wir ändern nun im HTML-Quelltext den Formular-Tag in den speziellen f:form-Tag ab::
+Wir ersetzen nun im HTML-Quelltext den Formular-Tag mit dem f:form-ViewHelperTag::
 
  <f:form action="create" method="post">
    <dl>
@@ -413,9 +423,9 @@ Wir ändern nun im HTML-Quelltext den Formular-Tag in den speziellen f:form-Tag 
    </dl>
  </f:form>
 
-Der f:form-ViewHelper hat bereits einen eingebauten UriBuilder an Board. Dadurch reicht es nun nur noch die Action
-"create" anzugeben. Im nächsten Schritt wollen wir durch dir Abänderung von den Input-Feldern zu ViewHelpern noch
-mehr einsparen::
+Der f:form-ViewHelper hat bereits einen eingebauten UriBuilder an Board. Dadurch reicht es nun, nur noch die Action
+"create" anzugeben. Im nächsten Schritt wollen wir durch die Abänderung von den Input-Feldern zu ViewHelpern noch
+ein wenig mehr an Quelltext einsparen::
 
  <f:form action="create" method="post">
    <dl>
@@ -438,9 +448,9 @@ mehr einsparen::
 
 Die f:form.* ViewHelper arbeiten sehr eng zusammen. So kann der f:form-ViewHelper den Pluginnamespace herausfinden
 und die ViewHelper für die Eingabefelder können darauf zugreifen und den Pluginnamespace automatisch dem
-name-Attribut voranstellen. Schaut es Euch mal in Eurem generierten HTML-Quellcode an.
+name-Attribut voranstellen. Schaut Euch mal den von Fluid generierten HTML-Quelltext an.
 
-Und zu guter letzt: Noch eine Einsparung::
+Und zu guter Letzt: Die perfekte Harmonie::
 
  <f:form action="create" objectName="newHotel" method="post" object="{newObject}">
    <dl>
@@ -462,12 +472,12 @@ Und zu guter letzt: Noch eine Einsparung::
  </f:form>
 
 Durch Angabe eines Objektnamens im f:form-ViewHelper könnt Ihr nun innerhalb der Formularfelder mit dem Attribut
-"property" arbeiten. Sobald "property" verwendet wird, werden die Attribute "name" und "value" nicht mehr ausgewerten.
+"property" arbeiten. Sobald "property" verwendet wird, werden die Attribute "name" und "value" nicht mehr ausgewertet.
 Sie sind also ohne Funktion. Die Angabe von "object" hilft die Formularfelder beim Bearbeiten von Datensätzen
 zu befüllen. Der hier abgebildete HTML-Quelltext generiert exakt das gleiche HTML wie das Beispiel darüber.
 
-Erst durch diese letzte Änderung haben wir ein voll Extbase kompatibles Formular. Das lässt sich am bestem im
-Quelltext erklären::
+Erst durch diese letzte Änderung haben wir ein voll Extbase kompatibles Formular. Hier nun der von Fluid generierte
+Quelltext::
 
  <form method="post" action="/index.php?id=75&amp;no_cache=1&amp;tx_sfextbase_extbase%5Baction%5D=create&amp;tx_sfextbase_extbase%5Bcontroller%5D=Hotel&amp;cHash=a8517760d81b3e7a2098f0f621e7fb22">
    <div>
@@ -539,7 +549,7 @@ es um das Thema Validierung geht brauchen wir immer den ValidatorResolver. Diese
 erzeugen. Aber das ist noch nicht alles. Er kann sogar die Action-Methoden aus dem Controller auslesen und mit Hilfe
 der Informationen aus der PHPDoc völlig automatisch die Validatoren zusammen stellen. Mit einer weiteren Methode kann
 der ValidatorResolver auch komplette Domainmodelle scannen und dort für jede Eigenschaft prüfen,
-ob im PHPDoc Informationen bzgl. Validierung vorhanden sind und genau das wollen wir im nächsten Schritt machen.
+ob im PHPDoc Informationen bzgl. Validierung vorhanden sind. Genau das, wollen wir im nächsten Schritt umsetzen.
 
 Wir ändern im Hotel-Domainmodel die PHPDoc für die Eigenschaft title ab::
 
@@ -557,4 +567,7 @@ Durch die Angabe von @validate kann nun ein Validator angegeben werden, der für
 
    Nur wenn Ihr mit Validatoren, Objekten und der Eigenschaft "property" im Formular arbeitet,
    nur dann werden bei Fehleingaben auch die Formularfelder rot hervorgehoben. Die Hervorhebung funktioniert NICHT,
-   wenn Ihr mit name und value-Attributen arbeitet.
+   wenn Ihr mit "name" und "value"-Attributen arbeitet.
+
+Ihr habt nun ein einfaches Extbase kompatibles Formular, habt erste Einblicke in die Verwendung des Property Mappers
+erhalten und wisst jetzt, welche Aufgaben Extbase Euch abgenommen hat.
